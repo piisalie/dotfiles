@@ -1,0 +1,15 @@
+(custom-set-variables
+      '(inhibit-startup-screen t)
+      '(mouse-wheel-mode 0))
+
+(menu-bar-mode 0)
+(setq column-number-mode t)
+(set-display-table-slot standard-display-table 'wrap ?\ )
+(display-battery-mode t)
+
+(setq display-time t
+      display-time-24hr-format t)
+(display-time)
+
+(setq backup-by-copying t
+      backup-directory-alist '(("." . "~/saves")))
