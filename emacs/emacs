@@ -7,7 +7,8 @@
  '(inhibit-startup-screen t)
  '(mouse-wheel-mode nil))
 
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+(electric-pair-mode t)
+(electric-indent-mode t)
 
 (menu-bar-mode 0)
 (setq column-number-mode t)
