@@ -1,5 +1,5 @@
-xterm*faceName: Liberation Mono
-xterm*faceSize: 10
+xterm*faceName: Source Code Pro
+xterm*faceSize: 12
 xterm*loginshell: true
 xterm*savelines: 1000
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
