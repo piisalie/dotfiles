@@ -11,19 +11,73 @@
 (electric-pair-mode t)
 (electric-indent-mode t)
 (scroll-bar-mode 0)
-
+(show-paren-mode t)
 (menu-bar-mode 0)
 (setq column-number-mode t)
+(global-auto-revert-mode t)
+
+(ido-mode 1)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
+
 (set-display-table-slot standard-display-table 'wrap ?\ )
-;(display-battery-mode t)
-
-
-;(setq display-time t
-;      display-time-24hr-format t)
-;(display-time)
-
-(setq scroll-step            1
-      scroll-conservatively  10000)
 
 (setq backup-by-copying t
       backup-directory-alist '(("." . "~/saves")))
+
+(defun esk-untabify-buffer ()
+  (interactive)
+  (untabify (point-min) (point-max)))
+
+(defun esk-indent-buffer ()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun esk-cleanup-buffer ()
+  "Perform a bunch of operations on the whitespace content of a buffer."
+  (interactive)
+  (esk-indent-buffer)
+  (esk-untabify-buffer)
+  (delete-trailing-whitespace))
+
+(defun newline-previous ()
+  "Insert a blank line above the cursor and move the cursor up one line."
+  (interactive)
+  (beginning-of-line)
+  (newline)
+  (previous-line)
+  (indent-according-to-mode))
+
+;; From https://github.com/defunkt/textmate.el
+(defun newline-next ()
+  "Inserts an indented newline after the current line and moves the point to it."
+  (interactive)
+  (end-of-line)
+  (newline-and-indent))
+
+(global-set-key (kbd "M-o") 'newline-previous)
+(global-set-key (kbd "C-o") 'newline-next)
+(global-set-key (kbd "C-c SPC") 'esk-cleanup-buffer)
+
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("emacs" . lisp-mode))
+
+;;; rhtml mode
+(add-to-list 'load-path "~/dotfiles/emacs/rhtml")
+(require 'rhtml-mode)
+
+;;; some electric pairing options from https://github.com/JEG2/dotfiles/blob/master/emacs.d/settings.el 
+(global-set-key (kbd "'")
+		(lambda () (interactive) (insert "'")))  ; don't pair ' anywhere
+(add-hook 'ruby-mode-hook
+	  (lambda () (add-to-list (make-local-variable 'electric-pair-pairs)
+				  '(?| . ?|))))   ; do pair | in Ruby
+(add-hook 'css-mode-hook
+	  (lambda () (add-to-list (make-local-variable 'electric-pair-pairs)
+				  '(?: . ?\;))))   ; pair : with ; in CSS
+(add-hook 'markdown-mode-hook
+	  (lambda () (add-to-list (make-local-variable 'electric-pair-pairs)
+				                                    '(?` . ?`))))   ; do pair ` in Markdown|
