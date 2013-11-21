@@ -81,3 +81,8 @@
 (add-hook 'markdown-mode-hook
 	  (lambda () (add-to-list (make-local-variable 'electric-pair-pairs)
 				                                    '(?` . ?`))))   ; do pair ` in Markdown|
+(require 'org-install)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
