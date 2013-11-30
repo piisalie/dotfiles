@@ -15,6 +15,7 @@ alias be="bundle exec"
 alias ber="bundle exec rake"
 alias bc="bundle console"
 alias rt="ber -T"
+alias fs="be foreman start"
 
 alias e="emacs -nw"
 
