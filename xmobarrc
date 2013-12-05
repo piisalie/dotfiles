@@ -3,25 +3,25 @@ Config { font         = "xft:Liberation Mono-10"
        , fgColor      = "grey"
        , position     = TopW L 93
        , lowerOnStart = True
-       , commands     = [ Run Weather "KPWA" ["-t","<station>: <tempC>C"
+       , commands     = [ Run Weather "KPWA" [ "-t","<station>: <tempC>C"
                                              , "-L","18","-H","29"
-					     , "--normal","green","--high","red","--low","lightblue"] 36000
-       	 	        , Run Cpu ["-L","3","-H","50"
-			          , "--normal","green","--high","red"] 10
-       	 		, Run Memory ["-t","Mem: <usedratio>%"] 10
-       	 		, Run Date "%d.%m.%Y %H:%M" "date" 10
-	 		, Run Battery ["-t","<left>% / <timeleft>"
-			              , "-L","20","-H","75"
-				      , "-h","green","-n","yellow","-l","red"
-				      , "--", "-c", "energy_full"] 600
-	 		, Run Uptime [] 10
-	 		, Run StdinReader
-			, Run CoreTemp ["-t", "<core0>:<core1>:<core2>:<core3>"
-			               , "-L", "50", "-H", "75"
-				       , "-l", "lightblue", "-n", "gray90", "-h", "red"] 10
-			  ]
-	, sepChar = "%"
-	, alignSep = "}{"
-	  template = " %cpu% | %coretemp% | %memory% | %StdinReader% }{ %KPWA% | %uptime% | %battery% | <fc=#ee9a00>%date%</fc>"
-	}
+                                             , "--normal","green","--high","red","--low","lightblue"] 36000
+                        , Run Cpu [ "-L","3","-H","50"
+                                  , "--normal","green","--high","red"] 10
+                        , Run Memory ["-t","Mem: <usedratio>%"] 10
+                        , Run Date "%d.%m.%Y %H:%M" "date" 10
+                        , Run Battery [ "-t","<left>% / <timeleft>"
+                                      , "-L","20","-H","75"
+                                      , "-h","green","-n","yellow","-l","red"
+                                      , "--", "-c", "energy_full"] 600
+                        , Run Uptime [] 10
+                        , Run StdinReader
+                        , Run CoreTemp [ "-t", "<core0>:<core1>:<core2>:<core3>"
+                                       , "-L", "50", "-H", "75"
+                                       , "-l", "lightblue", "-n", "gray90", "-h", "red"] 10
+                        ]
+        , sepChar = "%"
+        , alignSep = "}{"
+          template = " %cpu% | %coretemp% | %memory% | %StdinReader% }{ %KPWA% | %uptime% | %battery% | <fc=#ee9a00>%date%</fc>"
+        }
 	
