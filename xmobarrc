@@ -17,7 +17,7 @@ Config { font         = "xft:Liberation Mono-10"
                         , Run Uptime [] 10
                         , Run StdinReader
                         , Run CoreTemp [ "-t", "<core0>:<core1>:<core2>:<core3>"
-                                       , "-L", "50", "-H", "75"
+                                       , "-L", "50", "-H", "80"
                                        , "-l", "lightblue", "-n", "gray90", "-h", "red"] 10
                         ]
         , sepChar = "%"
