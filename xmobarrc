@@ -12,8 +12,7 @@ Config { font         = "xft:Liberation Mono-10"
                         , Run Date "%d.%m.%Y %H:%M" "date" 10
                         , Run Battery [ "-t","<left>% / <timeleft>"
                                       , "-L","20","-H","75"
-                                      , "-h","green","-n","yellow","-l","red"
-                                      , "--", "-c", "energy_full"] 600
+                                      , "-h","green","-n","yellow","-l","red" ] 600
                         , Run Uptime [] 10
                         , Run StdinReader
                         , Run CoreTemp [ "-t", "<core0>:<core1>:<core2>:<core3>"
@@ -24,4 +23,3 @@ Config { font         = "xft:Liberation Mono-10"
         , alignSep = "}{"
           template = " %cpu% | %coretemp% | %memory% | %StdinReader% }{ %KPWA% | %uptime% | %battery% | <fc=#ee9a00>%date%</fc>"
         }
-	

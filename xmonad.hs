@@ -1,6 +1,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Layout.NoBorders
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
@@ -22,7 +23,7 @@ main = do
             focusFollowsMouse = False,
             manageHook        = manageDocks <+> myManageHook
                                 <+> manageHook defaultConfig,
-            layoutHook        = avoidStruts  $  layoutHook defaultConfig,
+            layoutHook        = avoidStruts $ smartBorders $ layoutHook defaultConfig,
             logHook           = dynamicLogWithPP xmobarPP {
                               ppOutput = hPutStrLn xmproc,
                               ppOrder  = \(ws:_:t:_) -> [ws,t],
