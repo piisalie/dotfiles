@@ -17,7 +17,7 @@ alias bc="bundle console"
 alias rt="ber -T"
 alias fs="be foreman start"
 
-alias e="emacs -nw"
+alias e="ec -n -nw"
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'

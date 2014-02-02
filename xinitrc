@@ -7,7 +7,7 @@ case $1 in
         eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
         export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
-        trayer --edge top --align right --widthtype pixel --width 175 --transparent true --alpha 0 --tint 0 --expand true --SetDockType true --SetPartialStrut true --heighttype pixel --height 19 --monitor 0 &
+        trayer --edge top --align right --widthtype pixel --width 135 --transparent true --alpha 0 --tint 0 --expand true --SetDockType true --SetPartialStrut true --heighttype pixel --height 19 --monitor 0 &
         nm-applet --sm-disable &
         start-pulseaudio-x11 &
         system-config-printer-applet &
