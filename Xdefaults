@@ -1,9 +1,9 @@
 ! font settings --------------------------------------------------------------
 
-Xft.autohint: true
+Xft.autohint: false
 Xft.antialias: true
-Xft.hinting: true
-Xft.hintstyle: hintslight
+Xft.hinting: false
+Xft.hintstyle: hintnone !hintslight
 !Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
@@ -39,62 +39,83 @@ xscreensaver.passwd.thermometer.width:       8
 xterm*faceName: Source Code Pro
 xterm*faceSize: 13
 xterm*loginshell: true
-xterm*savelines: 1000
+xterm*savelines: 5000
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 xterm*metaSendsEscape: true
-xterm*boldMode: false
+xterm*boldMode: true
 
-!BLK Cursor
-#define _color0        #000d18
-#define _color8        #000d18
-!RED Tag
-#define _color1        #e89393
-#define _color9        #e89393
-!GRN SpecialKey
-#define _color2        #9ece9e
-#define _color10       #9ece9e
-!YEL Keyword
-#define _color3        #f0dfaf
-#define _color11       #f0dfaf
-!BLU Number
-#define _color4        #8cd0d3
-#define _color12       #8cd0d3
-!MAG Precondit
-#define _color5        #c0bed1
-#define _color13       #c0bed1
-!CYN Float
-#define _color6        #dfaf8f
-#define _color14       #dfaf8f
-!WHT Search
-#define _color7        #efefef
-#define _color15       #efefef
-!FMT Include, StatusLine, ErrorMsg
-#define _colorBD       #ffcfaf
-#define _colorUL       #ccdc90
-#define _colorIT       #80d4aa
-!TXT Normal, Normal, Cursor
-#define _foreground    #dcdccc
-#define _background    #1f1f1f
-#define _cursorColor   #8faf9f
-XTerm*color0         : _color0
-XTerm*color1         : _color1
-XTerm*color2         : _color2
-XTerm*color3         : _color3
-XTerm*color4         : _color4
-XTerm*color5         : _color5
-XTerm*color6         : _color6
-XTerm*color7         : _color7
-XTerm*color8         : _color8
-XTerm*color9         : _color9
-XTerm*color10        : _color10
-XTerm*color11        : _color11
-XTerm*color12        : _color12
-XTerm*color13        : _color13
-XTerm*color14        : _color14
-XTerm*color15        : _color15
-XTerm*colorBD        : _colorBD
-XTerm*colorIT        : _colorIT
-XTerm*colorUL        : _colorUL
-XTerm*foreground     : _foreground
-XTerm*background     : _background
-XTerm*cursorColor    : _cursorColor
+!TomorrowNightEighties
+#define t_background        #2d2d2d
+#define t_current_line      #393939
+#define t_selection         #515151
+#define t_foreground        #cccccc
+#define t_comment           #999999
+#define t_red               #f2777a
+#define t_orange            #f99157
+#define t_yellow            #ffcc66
+#define t_green             #99cc99
+#define t_aqua              #66cccc
+#define t_blue              #6699cc
+#define t_purple            #cc99cc
+
+
+XTerm*foreground:   t_foreground
+XTerm*background:   t_background
+XTerm*cursorColor:  #aeafad
+
+! Black / Grey
+XTerm*color0:       #000000
+XTerm*color8:       #666666
+
+! Red / Bright Red
+XTerm*color1:       t_red
+XTerm*color9:       #FF3334
+
+! Green + Bright Green
+XTerm*color2:       t_green
+XTerm*color10:      #9ec400
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+XTerm*color3:       t_orange
+XTerm*color11:      t_yellow
+
+! Blue + Bright Blue
+XTerm*color4:       t_blue
+XTerm*color12:      t_blue
+
+! Magenta (Purple) + Bright Magenta
+XTerm*color5:       t_purple
+XTerm*color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+XTerm*color6:       t_aqua
+XTerm*color14:      #54ced6
+
+! Light Grey (Selection) + White (Current Line)
+XTerm*color7:       t_selection
+XTerm*color15:      t_current_line
+
+URxvt.font: xft:Source Code Pro:regular:size=13:antialias=false
+URxvt.letterSpace: -2
+URxvt*scrollBar:false
+URxvt*loginShell: true
+
+URxvt*foreground:   #cccccc
+URxvt*background:   #2d2d2d
+URxvt*cursorColor:  #aeafad
+URxvt*color0:       #000000
+URxvt*color8:       #666666
+URxvt*color1:       #f2777a
+URxvt*color9:       #FF3334
+URxvt*color2:       #99cc99
+URxvt*color10:      #9ec400
+URxvt*color3:       #f99157
+URxvt*color11:      #ffcc66
+URxvt*color4:       #6699cc
+URxvt*color12:      #6699cc
+URxvt*color5:       #cc99cc
+URxvt*color13:      #b777e0
+URxvt*color6:       #66cccc
+URxvt*color14:      #54ced6
+URxvt*color7:       #515151
+URxvt*color15:      #393939

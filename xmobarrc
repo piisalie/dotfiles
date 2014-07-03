@@ -3,15 +3,15 @@ Config { font         = "xft:Liberation Mono-10"
        , fgColor      = "grey"
        , position     = TopW L 93
        , lowerOnStart = True
-       , commands     = [ Run Weather "KPWA" [ "-t","<station>: <tempC>C"
-                                             , "-L","18","-H","29"
+       , commands     = [ Run Weather "KOKC" [ "-t","<station>: <tempC>C"
+                                             , "-L","18","-H","35"
                                              , "--normal","green","--high","red","--low","lightblue"] 36000
                         , Run Cpu [ "-L","3","-H","50"
                                   , "--normal","green","--high","red"] 10
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
                         , Run Date "%d.%m.%Y %H:%M" "date" 10
                         , Run Battery [ "-t","<left>% / <timeleft>"
-                                      , "-L","20","-H","75"
+                                      , "-L","15","-H","50"
                                       , "-h","green","-n","yellow","-l","red" ] 600
                         , Run Uptime [] 10
                         , Run StdinReader
@@ -21,5 +21,5 @@ Config { font         = "xft:Liberation Mono-10"
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-          template = " %cpu% | %coretemp% | %memory% | %StdinReader% }{ %KPWA% | %uptime% | %battery% | <fc=#ee9a00>%date%</fc>"
+          template = " %cpu% | %coretemp% | %memory% | %StdinReader% }{ %KOKC% | %uptime% | %battery% | <fc=#ee9a00>%date%</fc>"
         }
