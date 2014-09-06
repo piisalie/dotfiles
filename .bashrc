@@ -2,8 +2,14 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby 2.1.2
 
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LESSCHARSET=utf-8
+
 export ALTERNATE_EDITOR=""
 export EDITOR=emacsclient
+export TERM=xterm-256color
+
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -39,16 +45,7 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-export PS1='\w$(parse_git_branch)\'
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1 <3"
-    ;;
-*)
-    ;;
-esac
+export PS1='\w$(parse_git_branch)\$'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -64,3 +61,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#for (( i=1; i<=$LINES; i++ )); do echo; done; clear

@@ -1,9 +1,38 @@
+xterm*foreground:   #c5c8c6
+xterm*background:   #0d0e0f
+xterm*cursorColor:  #aeafad
+xterm*color0:       #000000
+xterm*color1:       #912226
+xterm*color2:       #778900
+xterm*color3:       #ae7b00
+xterm*color4:       #1d2594
+xterm*color5:       #682a9b
+xterm*color6:       #2b6651
+xterm*color7:       #929593
+xterm*color8:       #666666
+xterm*color9:       #cc6666
+xterm*color10:      #b5bd68
+xterm*color11:      #f0c674
+xterm*color12:      #81a2be
+xterm*color13:      #b294bb
+xterm*color14:      #8abeb7
+xterm*color15:      #ecebec
+
+xterm*faceName: Source Code Pro:size=10:antialias=false
+!xterm*loginshell: true
+xterm*savelines: 2000
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+xterm*metaSendsEscape: true
+xterm*boldMode: false
+xterm*termName: xterm-256color
+xterm*locale: true
+
 ! font settings --------------------------------------------------------------
 
-Xft.autohint: false
+Xft.autohint: true
 Xft.antialias: true
-Xft.hinting: false
-Xft.hintstyle: hintnone !hintslight
+Xft.hinting: true
+Xft.hintstyle: hintslight
 !Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
@@ -35,89 +64,3 @@ xscreensaver.Dialog.shadowThickness:    2
 xscreensaver.passwd.thermometer.foreground:  #101010
 xscreensaver.passwd.thermometer.background:  #2E2E2E
 xscreensaver.passwd.thermometer.width:       8
-
-xterm*faceName: Source Code Pro
-xterm*faceSize: 14
-xterm*loginshell: true
-xterm*savelines: 5000
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-xterm*metaSendsEscape: true
-xterm*boldMode: true
-xterm*termName: xterm-256color
-XTerm*locale: true
-
-!TomorrowNightEighties
-#define t_background        #2d2d2d
-#define t_current_line      #393939
-#define t_selection         #515151
-#define t_foreground        #cccccc
-#define t_comment           #999999
-#define t_red               #f2777a
-#define t_orange            #f99157
-#define t_yellow            #ffcc66
-#define t_green             #99cc99
-#define t_aqua              #66cccc
-#define t_blue              #6699cc
-#define t_purple            #cc99cc
-
-
-XTerm*foreground:   t_foreground
-XTerm*background:   t_background
-XTerm*cursorColor:  #aeafad
-
-! Black / Grey
-XTerm*color0:       #000000
-XTerm*color8:       #666666
-
-! Red / Bright Red
-XTerm*color1:       t_red
-XTerm*color9:       #FF3334
-
-! Green + Bright Green
-XTerm*color2:       t_green
-XTerm*color10:      #9ec400
-
-! Yellow (Orange) + Bright Yellow (Yellow)
-XTerm*color3:       t_orange
-XTerm*color11:      t_yellow
-
-! Blue + Bright Blue
-XTerm*color4:       t_blue
-XTerm*color12:      t_blue
-
-! Magenta (Purple) + Bright Magenta
-XTerm*color5:       t_purple
-XTerm*color13:      #b777e0
-
-! Cyan (Aqua) + Bright Cyan
-XTerm*color6:       t_aqua
-XTerm*color14:      #54ced6
-
-! Light Grey (Selection) + White (Current Line)
-XTerm*color7:       t_selection
-XTerm*color15:      t_current_line
-
-URxvt.font: xft:Source Code Pro:regular:size=13:antialias=false
-URxvt.letterSpace: -2
-URxvt*scrollBar:false
-URxvt*loginShell: true
-
-URxvt*foreground:   #cccccc
-URxvt*background:   #2d2d2d
-URxvt*cursorColor:  #aeafad
-URxvt*color0:       #000000
-URxvt*color8:       #666666
-URxvt*color1:       #f2777a
-URxvt*color9:       #FF3334
-URxvt*color2:       #99cc99
-URxvt*color10:      #9ec400
-URxvt*color3:       #f99157
-URxvt*color11:      #ffcc66
-URxvt*color4:       #6699cc
-URxvt*color12:      #6699cc
-URxvt*color5:       #cc99cc
-URxvt*color13:      #b777e0
-URxvt*color6:       #66cccc
-URxvt*color14:      #54ced6
-URxvt*color7:       #515151
-URxvt*color15:      #393939
