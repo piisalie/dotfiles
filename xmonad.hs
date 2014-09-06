@@ -32,7 +32,7 @@ myWorkspaces = [ "1:emacs", "2:Term", "3:Misc", "4", "5", "6", "7", "8:Game", "9
 main = do
      xmproc <- spawnPipe "/usr/bin/xmobar /home/piisalie/dotfiles/xmobarrc"
      xmonad $ defaultConfig {
-            terminal          = "xterm",
+            terminal          = "uxterm",
             modMask           = mod4Mask,
             borderWidth       = 1,
             focusFollowsMouse = False,

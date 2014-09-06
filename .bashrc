@@ -1,9 +1,9 @@
 source /usr/local/share/chruby/chruby.sh
-chruby 2.0
+source /usr/local/share/chruby/auto.sh
+chruby 2.1.2
 
 export ALTERNATE_EDITOR=""
 export EDITOR=emacsclient
-export TERM=xterm-256color
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)

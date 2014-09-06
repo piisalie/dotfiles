@@ -11,7 +11,7 @@ Config { font         = "xft:Liberation Mono-10"
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
                         , Run Date "%d.%m.%Y %H:%M" "date" 10
                         , Run Battery [ "-t","<left>% / <timeleft>"
-                                      , "-L","15","-H","50"
+                                      , "-L","15","-H","40"
                                       , "-h","green","-n","yellow","-l","red" ] 600
                         , Run Uptime [] 10
                         , Run StdinReader
