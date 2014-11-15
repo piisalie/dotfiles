@@ -1,5 +1,3 @@
-DEFAULT_SESSION=openbox-session
-
 case $1 in
     xmonad)
 
@@ -15,6 +13,7 @@ case $1 in
         xfce4-volumed &
         xfce4-power-manager &
         xscreensaver -no-splash &
+        xcompmgr -c &
         syndaemon -k -t -d
         xmodmap ~/dotfiles/xmodmap
         xset b off
@@ -24,12 +23,11 @@ case $1 in
         xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Soft Button Areas" 3500 0 0 2500 2500 3500 0 2500
         nitrogen --restore
 
-        exec xmonad
         ;;
     openbox)
-        exec openbox-session
         ;;
     *)
-        exec $DEFAULT_SESSION
         ;;
 esac
+
+exec $1
