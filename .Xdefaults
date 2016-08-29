@@ -18,7 +18,7 @@ xterm*color13:      #b294bb
 xterm*color14:      #8abeb7
 xterm*color15:      #ecebec
 
-xterm*faceName: Source Code Pro:size=11:antialias=false
+xterm*faceName: Source Code Pro:size=13:antialias=false
 !xterm*loginshell: true
 xterm*savelines: 2000
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48

@@ -1,6 +1,6 @@
 source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby 2.1.2
+#source /usr/local/share/chruby/auto.sh
+chruby 2.2
 
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -10,6 +10,9 @@ export ALTERNATE_EDITOR=""
 export EDITOR=emacsclient
 export TERM=xterm-256color
 
+
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=/home/piisalie/work
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -45,7 +48,7 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-export PS1='\w$(parse_git_branch)\$'
+export PS1='\w$(parse_git_branch)\$ '
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

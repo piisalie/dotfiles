@@ -10,6 +10,7 @@ alias gps="git push"
 alias gpl="git pull"
 alias gpso="git push origin master"
 alias glr=" git --no-pager log --graph --abbrev-commit --date=relative -10 --all --pretty='tformat:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias gco="git checkout"
 
 alias be="bundle exec"
 alias ber="bundle exec rake"
